@@ -1,0 +1,133 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    body {
+      background-color: rgb(190, 221, 231);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #393939;
+      color: white;
+      padding: 50px 50px 0 50px;
+      border-radius: 50px;
+      margin: 20px;
+    }
+
+    .container .main-display {
+      font-weight: 500;
+      font-size: 60px;
+    }
+
+    .container .lap-display {
+      font-weight: 100;
+      font-size: 30px;
+      text-align: center;
+      opacity: 50%;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0;
+      margin: 10px 0;
+    }
+
+    .start-stopBtn {
+      padding: 12px 24px;
+      background-color: rgb(148, 80, 199);
+      font-weight: 500;
+      font-size: 16px;
+      color: white;
+      border: 0;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .lap-resetBtn {
+      padding: 12px 24px;
+      background-color: #6e6e6e;
+      font-weight: 500;
+      font-size: 16px;
+      color: white;
+      border: 0;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .lap-resetBtn:disabled {
+      opacity: 30%;
+      cursor: not-allowed
+    }
+
+    .stopped {
+      background-color: rgb(240, 43, 43);
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.2;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .blink {
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    .table-container {
+      background-color: #393939;
+      color: white;
+      padding: 20px;
+      border-radius: 50px;
+      margin: 20px;
+      height: 350px;
+      overflow-y: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+
+    th {
+      padding: 10px 18px;
+      font-size: 15px;
+      font-weight: 300;
+      border-bottom: 2px solid grey;
+      text-align: center;
+    }
+
+    td {
+      padding: 10px 18px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .table-container::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    .table-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 300px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 1px;
+    }
